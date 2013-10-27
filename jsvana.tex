@@ -1,7 +1,7 @@
 % resume.tex
 % vim:set ft=tex spell:
 
-\documentclass[10pt,letterpaper]{article}
+\documentclass[12pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
@@ -15,24 +15,24 @@
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
-	\item[]%
+        {\setlength{\leftmargin}{#1}}%
+        \item[]%
 }
 {\end{list}}
 
 % opposite of above; bump a section back toward the left margin
 \newenvironment{unindentsection}[1]%
 {\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
+        {\setlength{\leftmargin}{-0.5#1}}%
+        \item[]%
 }
 {\end{list}}
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
+        #1 &
+        #2 \\
 \end{tabular*}}
 
 % make "C++" look pretty when used in text by touching up the plus signs
@@ -42,6 +42,7 @@
 % and the actual content starts here
 \begin{document}
 
+\vspace{3em}
 \begin{center}
 {\LARGE \textbf{Jay Vana}}
 
@@ -53,145 +54,114 @@ github.com/jsvana\ \ \textbullet
 
 \hrule
 \vspace{-0.4em}
-\subsection*{Education}
-
-\begin{itemize}
-	\parskip=0.1em
-
-	\item
-	\headerrow
-		{\textbf{Michigan Technological University}}
-		{\textbf{Houghton, MI}}
-	\\
-	\headerrow
-		{\emph{B.S. Computer Science}}
-		{\emph{Expected Spring 2014}}
-
-\end{itemize}
-
-\hrule
-\vspace{-0.4em}
 \subsection*{Experience}
 
 \begin{itemize}
-	\parskip=0.1em
+        \parskip=0.1em
 
-	\item
-	\headerrow
-		{\textbf{Facebook}}
-		{\textbf{Menlo Park, CA}}
-	\\
-	\headerrow
-		{\emph{Production Engineer Intern}}
-		{\emph{Summer 2013}}
-	\begin{itemize*}
-		\item Worked on the databases team to improve efficiency in current software
-		\item Wrote scalable, distributed applications to replace aging backup infrastructure
-	\end{itemize*}
+        \item
+        \headerrow
+                {\textbf{Facebook}}
+                {\textbf{Menlo Park, CA}}
+        \\
+        \headerrow
+                {\emph{Production Engineer Intern}}
+                {\emph{Summer 2013}}
+        \begin{itemize*}
+                \item Worked with Messaging Infrastructure team to develop highly scalable systems
+                \item Developed a large distributed system in C++
+                \item Interacted with a plethora of different programming languages
+        \end{itemize*}
 
-	\item
-	\headerrow
-		{\textbf{Control-Tec}}
-		{\textbf{Allen Park, MI}}
-	\\
-	\headerrow
-		{\emph{Software Developer}}
-		{\emph{Summer 2012 -- Spring 2013}}
-	\begin{itemize*}
-		\item Produced C applications on an embedded ARM box
-		\item Made improvements to a Mac OSX app used for debugging
-		\item Working on a server to run on an embedded box for universal access
-	\end{itemize*}
+        \item
+        \headerrow
+                {\textbf{Life Cycle Solutions, LLC}}
+                {\textbf{Houghton, MI}}
+        \\
+        \headerrow
+                {\emph{Lead Developer}}
+                {\emph{September 2010 - Present}}
+        \begin{itemize*}
+                \item Developed asynchronous AJAX frontend for LTPP road data
+                \item Worked across disciplines with civil and mechanical engineers
+                \item Creating real-time graphing and mapping interface for DOT
+        \end{itemize*}
 
-	\item
-	\headerrow
-		{\textbf{Cypress Computer Systems}}
-		{\textbf{Lapeer, MI}}
-	\\
-	\headerrow
-		{\emph{Software Consultant, Summer Intern}}
-		{\emph{Summer 2010 -- Spring 2011}}
-	\begin{itemize*}
-		\item Developed web applications using PHP and HTML
-		\item Designed and implemented both the backend and frontend
-	\end{itemize*}
+        \item
+        \headerrow
+                {\textbf{CONTROLTEC, LLC}}
+                {\textbf{Allen Park, MI}}
+        \\
+        \headerrow
+                {\emph{Software Developer Intern}}
+                {\emph{Summer 2012 -- Spring 2013}}
+        \begin{itemize*}
+                \item Worked in Adobe Flex to build a data graphing and analysis tool
+                \item Optimized algorithms to work with large datasets
+                \item Worked with external frameworks including Google Maps to provide more functionality to product
+        \end{itemize*}
 
 \end{itemize}
 
 \hrule
 \vspace{-0.4em}
-\subsection*{Projects}
+\subsection*{Education}
 
 \begin{itemize}
-	\parskip=0.1em
+        \parskip=0.1em
 
-	\item {\textbf{Seabird}} \\
-		\emph{http://bitbucket.org/belak/seabird}
-		\begin{itemize*}
-			\item An IRC bot currently being rewritten in Go
-			\item Uses a plugin architecture similar to the standard library’s database package
-		\end{itemize*}
-
-	\item {\textbf{Recoded}} \\
-		\emph{http://bitbucket.org/belak/recoded}
-		\begin{itemize*}
-			\item A game written using \CPP\ and Allegro 5
-			\item Though Allegro is a C library, everything in this game is conveniently abstracted
-		\end{itemize*}
-
-	\item {\textbf{Encoded}} \\
-		\emph{http://bitbucket.org/belak/encoded-legacy}
-		\begin{itemize*}
-			\item A simple RPG framework in C, using OpenGL
-			\item A first attempt at game programming – written from scratch using OpenGL’s immediate mode
-		\end{itemize*}
+        \item
+        \headerrow
+                {\textbf{Michigan Technological University}}
+                {\textbf{Houghton, MI}}
+        \\
+        \headerrow
+                {\emph{B.S. Computer Science}}
+                {\emph{Expected Fall 2014}}
 
 \end{itemize}
 
 \hrule
 \vspace{-0.4em}
-\subsection*{Extracurriculars}
+\subsection*{Extracurricular Involvement}
 
 \begin{itemize}
-	\parskip=0.1em
+        \parskip=0.1em
 
-	\item
-	\headerrow
-		{President of the Michigan Tech Linux Users Group}
-		{\emph{Spring 2013-Present}}
+        \item
+        \headerrow
+                {Venue Manager, Traverse City Film Festival}
+                {\emph{Summers 2009 - 2013}}
 
-	\item
-	\headerrow
-		{Lead Server Administrator of the Michigan Tech Linux Users Group}
-		{\emph{Fall 2012-Present}}
+        \item
+        \headerrow
+                {Vice President of the Michigan Tech Linux Users Group}
+                {\emph{Spring 2013-Present}}
 
-	\item
-	\headerrow
-		{Team lead for the Husky Games enterprise}
-		{\emph{Spring 2013-Present}}
-
-	\item
-	\headerrow
-		{ITOxygen Enterprise team lead}
-		{\emph{Spring 2012-Spring 2013}}
+        \item
+        \headerrow
+                {Founder and President, IT Crowd (Campus network, IT, and infrastructure services)}
+                {\emph{Fall 2012 - Present}}
+        \item
+        \headerrow
+                {Lead Developer and CTO, ITOxygen Enterprise}
+                {\emph{Fall 2010 - May 2013}}
 
 \end{itemize}
 
 \hrule
 \vspace{-0.4em}
-\subsection*{Core Technical Skills}
+\subsection*{Technical Skills}
 
 \begin{indentsection}{\parindent}
 \hyphenpenalty=1000
 \begin{description*}
-	\item[Languages:]
-	C, \CPP, Go, Python, PHP, Objective C, Java, HTML, CSS, Ruby, and Bash
-	\item[Concurrent Programming:]
-	Experience in C, \CPP, and Go
-	\item[Linux Distros:]
-	Debian, Fedora, Gentoo, Arch Linux and more
-	\item[Database Platforms:]
-	MySQL, PostgreSQL, and MongoDB
+        \item[Languages:]
+                C, \CPP, Ruby, Lua, Java, PHP, Python, Perl, SQL, Go, HTML5, CSS3, CoffeeScript, and Javascript (also with jQuery, Knockout.js, and Node.js)
+        \item[Concurrent Programming:]
+        Experience in C and \CPP
+        \item[Operating Systems:]
+        Arch Linux, Debian, Fedora, Ubuntu; Windows 2000 - 8; OS 10.4 - 10.9
 \end{description*}
 \end{indentsection}
 
