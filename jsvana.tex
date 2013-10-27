@@ -1,0 +1,198 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jay Vana}}
+
+github.com/jsvana\ \ \textbullet
+\ \ jaysvana@gmail.com\\
+216 Hubbell Street\ \ \textbullet
+\ \ Houghton, MI 49931
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Michigan Technological University}}
+		{\textbf{Houghton, MI}}
+	\\
+	\headerrow
+		{\emph{B.S. Computer Science}}
+		{\emph{Expected Spring 2014}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Facebook}}
+		{\textbf{Menlo Park, CA}}
+	\\
+	\headerrow
+		{\emph{Production Engineer Intern}}
+		{\emph{Summer 2013}}
+	\begin{itemize*}
+		\item Worked on the databases team to improve efficiency in current software
+		\item Wrote scalable, distributed applications to replace aging backup infrastructure
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Control-Tec}}
+		{\textbf{Allen Park, MI}}
+	\\
+	\headerrow
+		{\emph{Software Developer}}
+		{\emph{Summer 2012 -- Spring 2013}}
+	\begin{itemize*}
+		\item Produced C applications on an embedded ARM box
+		\item Made improvements to a Mac OSX app used for debugging
+		\item Working on a server to run on an embedded box for universal access
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Cypress Computer Systems}}
+		{\textbf{Lapeer, MI}}
+	\\
+	\headerrow
+		{\emph{Software Consultant, Summer Intern}}
+		{\emph{Summer 2010 -- Spring 2011}}
+	\begin{itemize*}
+		\item Developed web applications using PHP and HTML
+		\item Designed and implemented both the backend and frontend
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Projects}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item {\textbf{Seabird}} \\
+		\emph{http://bitbucket.org/belak/seabird}
+		\begin{itemize*}
+			\item An IRC bot currently being rewritten in Go
+			\item Uses a plugin architecture similar to the standard library’s database package
+		\end{itemize*}
+
+	\item {\textbf{Recoded}} \\
+		\emph{http://bitbucket.org/belak/recoded}
+		\begin{itemize*}
+			\item A game written using \CPP\ and Allegro 5
+			\item Though Allegro is a C library, everything in this game is conveniently abstracted
+		\end{itemize*}
+
+	\item {\textbf{Encoded}} \\
+		\emph{http://bitbucket.org/belak/encoded-legacy}
+		\begin{itemize*}
+			\item A simple RPG framework in C, using OpenGL
+			\item A first attempt at game programming – written from scratch using OpenGL’s immediate mode
+		\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Extracurriculars}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{President of the Michigan Tech Linux Users Group}
+		{\emph{Spring 2013-Present}}
+
+	\item
+	\headerrow
+		{Lead Server Administrator of the Michigan Tech Linux Users Group}
+		{\emph{Fall 2012-Present}}
+
+	\item
+	\headerrow
+		{Team lead for the Husky Games enterprise}
+		{\emph{Spring 2013-Present}}
+
+	\item
+	\headerrow
+		{ITOxygen Enterprise team lead}
+		{\emph{Spring 2012-Spring 2013}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	C, \CPP, Go, Python, PHP, Objective C, Java, HTML, CSS, Ruby, and Bash
+	\item[Concurrent Programming:]
+	Experience in C, \CPP, and Go
+	\item[Linux Distros:]
+	Debian, Fedora, Gentoo, Arch Linux and more
+	\item[Database Platforms:]
+	MySQL, PostgreSQL, and MongoDB
+\end{description*}
+\end{indentsection}
+
+\end{document}
